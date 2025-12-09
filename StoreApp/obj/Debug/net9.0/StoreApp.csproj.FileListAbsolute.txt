@@ -242,3 +242,9 @@ C:\MVC\Store\StoreApp\obj\Debug\net9.0\compressed\gh5c331mho-{0}-ttgo8qnofa-ttgo
 C:\MVC\Store\StoreApp\obj\Debug\net9.0\compressed\r2v60iw7yu-{0}-2z0ns9nrw6-2z0ns9nrw6.gz
 C:\MVC\Store\StoreApp\obj\Debug\net9.0\compressed\qobx3u4c14-{0}-muycvpuwrr-muycvpuwrr.gz
 C:\MVC\Store\StoreApp\obj\Debug\net9.0\compressed\0k32gs1iux-{0}-87fc7y1x7t-87fc7y1x7t.gz
+C:\MVC\Store\StoreApp\bin\Debug\net9.0\Entities.dll
+C:\MVC\Store\StoreApp\bin\Debug\net9.0\Entities.pdb
+C:\MVC\Store\StoreApp\obj\Debug\net9.0\StoreApp.sourcelink.json
+C:\MVC\Store\StoreApp\obj\Debug\net9.0\compressed\kwmecbdtre-{0}-5ipweew5fc-5ipweew5fc.gz
+C:\MVC\Store\StoreApp\bin\Debug\net9.0\Repositories.dll
+C:\MVC\Store\StoreApp\bin\Debug\net9.0\Repositories.pdb
