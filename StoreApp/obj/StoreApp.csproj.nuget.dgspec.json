@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\MVC\\store\\StoreApp\\StoreApp.csproj": {}
+    "C:\\MVC\\Store\\StoreApp\\StoreApp.csproj": {}
   },
   "projects": {
-    "C:\\MVC\\store\\Entities\\Entities.csproj": {
+    "C:\\MVC\\Store\\Entities\\Entities.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\MVC\\store\\Entities\\Entities.csproj",
+        "projectUniqueName": "C:\\MVC\\Store\\Entities\\Entities.csproj",
         "projectName": "Entities",
-        "projectPath": "C:\\MVC\\store\\Entities\\Entities.csproj",
+        "projectPath": "C:\\MVC\\Store\\Entities\\Entities.csproj",
         "packagesPath": "C:\\Users\\zehol\\.nuget\\packages\\",
-        "outputPath": "C:\\MVC\\store\\Entities\\obj\\",
+        "outputPath": "C:\\MVC\\Store\\Entities\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -97,8 +97,8 @@
           "net9.0": {
             "targetAlias": "net9.0",
             "projectReferences": {
-              "C:\\MVC\\store\\Entities\\Entities.csproj": {
-                "projectPath": "C:\\MVC\\store\\Entities\\Entities.csproj"
+              "C:\\MVC\\Store\\Entities\\Entities.csproj": {
+                "projectPath": "C:\\MVC\\Store\\Entities\\Entities.csproj"
               }
             }
           }
@@ -148,14 +148,14 @@
         }
       }
     },
-    "C:\\MVC\\store\\StoreApp\\StoreApp.csproj": {
+    "C:\\MVC\\Store\\StoreApp\\StoreApp.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\MVC\\store\\StoreApp\\StoreApp.csproj",
+        "projectUniqueName": "C:\\MVC\\Store\\StoreApp\\StoreApp.csproj",
         "projectName": "StoreApp",
-        "projectPath": "C:\\MVC\\store\\StoreApp\\StoreApp.csproj",
+        "projectPath": "C:\\MVC\\Store\\StoreApp\\StoreApp.csproj",
         "packagesPath": "C:\\Users\\zehol\\.nuget\\packages\\",
-        "outputPath": "C:\\MVC\\store\\StoreApp\\obj\\",
+        "outputPath": "C:\\MVC\\Store\\StoreApp\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -176,8 +176,8 @@
           "net9.0": {
             "targetAlias": "net9.0",
             "projectReferences": {
-              "C:\\MVC\\store\\Entities\\Entities.csproj": {
-                "projectPath": "C:\\MVC\\store\\Entities\\Entities.csproj"
+              "C:\\MVC\\Store\\Entities\\Entities.csproj": {
+                "projectPath": "C:\\MVC\\Store\\Entities\\Entities.csproj"
               },
               "C:\\MVC\\Store\\Repositories\\Repositories.csproj": {
                 "projectPath": "C:\\MVC\\Store\\Repositories\\Repositories.csproj"

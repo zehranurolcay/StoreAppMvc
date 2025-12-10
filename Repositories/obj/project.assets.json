@@ -1161,8 +1161,8 @@
         "net9.0": {
           "targetAlias": "net9.0",
           "projectReferences": {
-            "C:\\MVC\\store\\Entities\\Entities.csproj": {
-              "projectPath": "C:\\MVC\\store\\Entities\\Entities.csproj"
+            "C:\\MVC\\Store\\Entities\\Entities.csproj": {
+              "projectPath": "C:\\MVC\\Store\\Entities\\Entities.csproj"
             }
           }
         }
