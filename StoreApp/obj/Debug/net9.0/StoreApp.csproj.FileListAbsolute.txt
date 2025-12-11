@@ -248,3 +248,5 @@ C:\MVC\Store\StoreApp\obj\Debug\net9.0\StoreApp.sourcelink.json
 C:\MVC\Store\StoreApp\obj\Debug\net9.0\compressed\kwmecbdtre-{0}-5ipweew5fc-5ipweew5fc.gz
 C:\MVC\Store\StoreApp\bin\Debug\net9.0\Repositories.dll
 C:\MVC\Store\StoreApp\bin\Debug\net9.0\Repositories.pdb
+C:\MVC\Store\StoreApp\bin\Debug\net9.0\Services.dll
+C:\MVC\Store\StoreApp\bin\Debug\net9.0\Services.pdb
