@@ -1,10 +1,11 @@
+using Entities.Models;
 using Microsoft.AspNetCore.Mvc;
 using Services.Contracts;
 
 namespace StoreApp.Areas.Admin.Controllers
 {
     [Area("Admin")]
-    public class ProductController : Controller 
+    public class ProductController : Controller
     {
         private readonly IServiceManager _manager;
 
@@ -18,5 +19,41 @@ namespace StoreApp.Areas.Admin.Controllers
             var model = _manager.ProductService.GetAllProducts(false);
             return View(model);
         }
+
+        public IActionResult Create()
+        {
+            return View();
+        }
+
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public IActionResult Create([FromForm] Product product)
+        {
+            if (ModelState.IsValid)
+            {
+                _manager.ProductService.CreateProduct(product);
+
+            }
+            return View();
+        }
+
+        public IActionResult Update([FromRoute(Name = "id")] int id)
+        {
+            var model = _manager.ProductService.GetOneProduct(id, false);
+            return View(model);
+        }
+
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public IActionResult Update([FromForm] Product product)
+        {
+            if (ModelState.IsValid)
+            {
+                _manager.ProductService.UpdateOneProduct(product);
+                return RedirectToAction("Index");
+            }
+            return View();
+        }
+
     }
 }
