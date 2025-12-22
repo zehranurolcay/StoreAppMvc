@@ -1,9 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "4vqBZw306hw=",
+  "dgSpecHash": "im0zBmEbEUs=",
   "success": true,
   "projectFilePath": "C:\\MVC\\Store\\Services\\Services.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\zehol\\.nuget\\packages\\automapper\\12.0.1\\automapper.12.0.1.nupkg.sha512",
+    "C:\\Users\\zehol\\.nuget\\packages\\automapper.extensions.microsoft.dependencyinjection\\12.0.1\\automapper.extensions.microsoft.dependencyinjection.12.0.1.nupkg.sha512",
+    "C:\\Users\\zehol\\.nuget\\packages\\microsoft.csharp\\4.7.0\\microsoft.csharp.4.7.0.nupkg.sha512",
     "C:\\Users\\zehol\\.nuget\\packages\\microsoft.data.sqlite.core\\9.0.11\\microsoft.data.sqlite.core.9.0.11.nupkg.sha512",
     "C:\\Users\\zehol\\.nuget\\packages\\microsoft.entityframeworkcore\\9.0.11\\microsoft.entityframeworkcore.9.0.11.nupkg.sha512",
     "C:\\Users\\zehol\\.nuget\\packages\\microsoft.entityframeworkcore.abstractions\\9.0.11\\microsoft.entityframeworkcore.abstractions.9.0.11.nupkg.sha512",
