@@ -56,7 +56,7 @@ namespace StoreApp.Areas.Admin.Controllers
 
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public IActionResult Update([FromForm] Product product)
+        public IActionResult Update([FromForm] ProductDtoForUpdate product)
         {
             if (ModelState.IsValid)
             {
