@@ -6,16 +6,19 @@ namespace Services
     {
         private readonly IProductService _productService;
         private readonly ICategoryService _categoryService;
-
-        public ServiceManager(ICategoryService categoryService, 
-        IProductService productService)
+        private readonly IOrderService _orderService;
+        public ServiceManager(ICategoryService categoryService,
+        IProductService productService,
+        IOrderService orderService)
         {
             _categoryService = categoryService;
             _productService = productService;
+            _orderService = orderService;
         }
-
+        public IOrderService OrderService => _orderService;
         public IProductService ProductService => _productService;
 
         public ICategoryService CategoryService => _categoryService;
+
     }
 }
