@@ -17,7 +17,6 @@ namespace Services
         }
         public IOrderService OrderService => _orderService;
         public IProductService ProductService => _productService;
-
         public ICategoryService CategoryService => _categoryService;
 
     }
