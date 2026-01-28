@@ -12,6 +12,7 @@ builder.Services.ConfigureServiceRegistration();
 
 builder.Services.AddAutoMapper(typeof(Program));
 
+
 var app = builder.Build();
 app.UseStaticFiles();
 app.UseSession();
@@ -25,5 +26,5 @@ app.UseEndpoints(endpoints =>
     endpoints.MapRazorPages();
 });
 
-
+app.ConfigureAndCheckMigration();
 app.Run();
