@@ -40,9 +40,18 @@ namespace Services
             return _manager.Product.GetAllProducts(trackchanges);
         }
 
-        public IQueryable<Product> GetAllProductsWithDetails(ProductRequestParameters p)
+        public IEnumerable<Product> GetAllProductsWithDetails(ProductRequestParameters p)
         {
             return _manager.Product.GetAllProductsWithDetails(p);
+        }
+
+        public IEnumerable<Product> GetLastestProducts(int n, bool trackChanges)
+        {
+            return _manager
+            .Product
+            .FindAll(trackChanges)
+            .OrderByDescending(prd => prd.ProductId)
+            .Take(n);
         }
 
         public Product? GetOneProduct(int id, bool trackchanges)
@@ -73,6 +82,11 @@ namespace Services
             var entity = _mapper.Map<Product>(productDto);
             _manager.Product.UpdateOneProduct(entity);
             _manager.Save();
+        }
+
+        IEnumerable<Product> IProductService.GetAllProductsWithDetails(ProductRequestParameters p)
+        {
+            return GetAllProductsWithDetails(p);
         }
     }
 }
