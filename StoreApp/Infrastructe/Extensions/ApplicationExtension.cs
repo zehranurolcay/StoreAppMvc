@@ -18,5 +18,16 @@ namespace StoreApp.Infrastructe.Extensios
                 context.Database.Migrate();
             }
         }   
+    
+        public static void ConfiureLocalization(this WebApplication app)
+        {
+            app.UseRequestLocalization(options =>
+            {
+                options.AddSupportedCultures("tr-TR")
+                .AddSupportedUICultures("tr-TR")
+                .SetDefaultCulture("tr-TR");
+            });
+        }
     }
+
 }

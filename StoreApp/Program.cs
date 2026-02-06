@@ -27,4 +27,5 @@ app.UseEndpoints(endpoints =>
 });
 
 app.ConfigureAndCheckMigration();
+app.ConfiureLocalization();
 app.Run();
