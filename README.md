@@ -8,6 +8,9 @@ Basit bir mağaza uygulaması örneği olarak geliştirdiğim ASP.NET MVC projes
 - Basit ürün ve sipariş yönetimi
 - Entity Framework ile veri erişimi
 - Şu anda geliştirme aşamasında
+- AutoMapper ile DTO yönetimi  
+- Razor Pages ve ViewComponent kullanımı  
+- Session yönetimi ve sepet işlemleri 
 
 ## Kullanılan Teknolojiler
 
@@ -15,6 +18,7 @@ Basit bir mağaza uygulaması örneği olarak geliştirdiğim ASP.NET MVC projes
 - Entity Framework
 - SQL Server (veya başka bir ilişkisel veritabanı)
 - Git ile versiyon kontrolü
+- AutoMapper, Razor Pages, ViewComponent
 
 ## Gelecek Planlar
 
