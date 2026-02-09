@@ -153,7 +153,6 @@ C:\MVC\Store\StoreApp\obj\Debug\net9.0\StoreApp.csproj.AssemblyReference.cache
 C:\MVC\Store\StoreApp\obj\Debug\net9.0\StoreApp.csproj.Up2Date
 C:\MVC\Store\StoreApp\bin\Debug\net9.0\StoreApp.staticwebassets.runtime.json
 C:\MVC\Store\StoreApp\bin\Debug\net9.0\libman.json
-C:\MVC\Store\StoreApp\obj\Debug\net9.0\compressed\1rwsgjw0ei-{0}-5ipweew5fc-5ipweew5fc.gz
 C:\MVC\Store\StoreApp\obj\Debug\net9.0\compressed\dbmt39un0j-{0}-xr48t8nauq-xr48t8nauq.gz
 C:\MVC\Store\StoreApp\obj\Debug\net9.0\compressed\uprn925m48-{0}-m63nr5e1wm-m63nr5e1wm.gz
 C:\MVC\Store\StoreApp\obj\Debug\net9.0\compressed\6wndkdw519-{0}-gaqwphjnqn-gaqwphjnqn.gz
@@ -252,3 +251,9 @@ C:\MVC\Store\StoreApp\bin\Debug\net9.0\Services.dll
 C:\MVC\Store\StoreApp\bin\Debug\net9.0\Services.pdb
 C:\MVC\Store\StoreApp\bin\Debug\net9.0\AutoMapper.dll
 C:\MVC\Store\StoreApp\bin\Debug\net9.0\AutoMapper.Extensions.Microsoft.DependencyInjection.dll
+C:\MVC\Store\StoreApp\obj\Debug\net9.0\compressed\1rwsgjw0ei-{0}-mykza2k15f-mykza2k15f.gz
+C:\MVC\Store\StoreApp\bin\Debug\net9.0\Microsoft.AspNetCore.Cryptography.Internal.dll
+C:\MVC\Store\StoreApp\bin\Debug\net9.0\Microsoft.AspNetCore.Cryptography.KeyDerivation.dll
+C:\MVC\Store\StoreApp\bin\Debug\net9.0\Microsoft.AspNetCore.Identity.EntityFrameworkCore.dll
+C:\MVC\Store\StoreApp\bin\Debug\net9.0\Microsoft.Extensions.Identity.Core.dll
+C:\MVC\Store\StoreApp\bin\Debug\net9.0\Microsoft.Extensions.Identity.Stores.dll

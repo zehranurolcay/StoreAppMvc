@@ -1,4 +1,4 @@
-namespace StoreApp.Infrastructe.Extensios
+namespace StoreApp.Infrastructure.Extensios
 {
     public static class HttpRequestExtensions
     {

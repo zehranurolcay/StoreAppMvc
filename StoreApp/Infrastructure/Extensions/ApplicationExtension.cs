@@ -1,7 +1,7 @@
 using Microsoft.EntityFrameworkCore;
 using Repositories;
 
-namespace StoreApp.Infrastructe.Extensios
+namespace StoreApp.Infrastructure.Extensios
 {
     public static class ApplicationExtension
     {
