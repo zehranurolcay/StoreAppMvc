@@ -56,6 +56,7 @@ namespace StoreApp.Controllers
         {
             return View();
         }
+
         [HttpPost]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Register([FromForm] RegisterDto model)
@@ -65,6 +66,7 @@ namespace StoreApp.Controllers
                 UserName = model.UserName,
                 Email = model.Email
             };
+            
             var result = await _userManager
             .CreateAsync(user, model.Password);
             if (result.Succeeded)
