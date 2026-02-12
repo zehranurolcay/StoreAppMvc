@@ -20,8 +20,8 @@ namespace Services
             _mapper = mapper;
         }
 
-         public IEnumerable<IdentityRole> Roles =>
-            _roleManager.Roles;
+        public IEnumerable<IdentityRole> Roles =>
+           _roleManager.Roles;
 
         public async Task<IdentityResult> CreateUser(UserDtoForCreation userDto)
         {
@@ -44,6 +44,43 @@ namespace Services
         public IEnumerable<IdentityUser> GetAllUsers()
         {
             return _userManager.Users.ToList();
+        }
+
+        public async Task<IdentityUser> GetOneUser(string userName)
+        {
+            return await _userManager.FindByNameAsync(userName);
+        }
+
+        public async Task Update(UserDtoForUpdate userDto)
+        {
+            var user = await GetOneUser(userDto.UserName);
+            user.PhoneNumber = userDto.PhoneNumber;
+            user.Email = userDto.Email;
+
+            if (user is not null)
+            {
+                var result = await _userManager.UpdateAsync(user);
+                if (userDto.Roles.Count > 0)
+                {
+                    var UserRoles = await _userManager.GetRolesAsync(user);
+                    var r1 = await _userManager.RemoveFromRolesAsync(user, UserRoles);
+                    var r2 = await _userManager.AddToRolesAsync(user, userDto.Roles);
+                }
+                return;
+            }
+            throw new Exception("System has a problems with user update.");
+        }
+        public async Task<UserDtoForUpdate> GetOneUserForUpdate(string userName)
+        {
+            var user = await GetOneUser(userName);
+            if(user is not null)
+            {
+                var userDto = _mapper.Map<UserDtoForUpdate>(user);
+                userDto.Roles = Roles.Select(r => r.Name).ToHashSet();
+                userDto.UserRoles = (await _userManager.GetRolesAsync(user)).ToHashSet();
+                return userDto;
+            }
+            throw new Exception ("An error occured.");
         }
     }
 }

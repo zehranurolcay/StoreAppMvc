@@ -24,11 +24,11 @@ namespace StoreApp.Areas.Admin.Controllers
         {
             return View(new UserDtoForCreation()
             {
-                Roles = new HashSet<string>(_manager
+                Roles = _manager
                     .AuthService
                     .Roles
                     .Select(r => r.Name)
-                    .ToList())
+                    .ToHashSet()
             });
         }
 
@@ -39,7 +39,25 @@ namespace StoreApp.Areas.Admin.Controllers
             var result = await _manager.AuthService.CreateUser(userDto);
             return result.Succeeded
                 ? RedirectToAction("Index")
-                : View();
+                : View(userDto);
+        }
+
+        public async Task<IActionResult> Update([FromRoute(Name ="id")] string id)
+        {
+            var user = await _manager.AuthService.GetOneUserForUpdate(id);
+            return View(user);
+        }
+
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public async Task<IActionResult> Update([FromForm] UserDtoForUpdate userDto)
+        {
+            if (ModelState.IsValid)
+            {
+                await _manager.AuthService.Update(userDto);
+                return RedirectToAction("Index");
+            }
+            return View();
         }
     }
 }
