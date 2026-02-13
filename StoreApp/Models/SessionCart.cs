@@ -29,7 +29,7 @@ namespace StoreApp.Models
 
             SessionCart cart = session?.GetJson<SessionCart>(key) ?? new SessionCart(key);
             cart.Session = session;
-            cart._key = key;   // bunu birazdan ekleyeceğiz
+            cart._key = key;  
             return cart;
         }
 

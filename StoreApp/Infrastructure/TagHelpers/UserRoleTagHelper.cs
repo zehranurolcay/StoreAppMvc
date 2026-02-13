@@ -13,13 +13,15 @@ namespace StoreApp.Infrastructure.TagHelpers
         [HtmlAttributeName("user-name")]
         public String? UserName { get; set; }
         
-        public UserRoleTagHelper(UserManager<IdentityUser> userManager, RoleManager<IdentityRole> roleManager)
+        public UserRoleTagHelper(UserManager<IdentityUser> userManager, 
+        RoleManager<IdentityRole> roleManager)
         {
             _userManager = userManager;
             _roleManager = roleManager;
         }
 
-        public override async Task ProcessAsync(TagHelperContext context, TagHelperOutput output)
+        public override async Task ProcessAsync(TagHelperContext context, 
+        TagHelperOutput output)
         {
             var user = await _userManager.FindByNameAsync(UserName);
             TagBuilder ul = new TagBuilder("ul");

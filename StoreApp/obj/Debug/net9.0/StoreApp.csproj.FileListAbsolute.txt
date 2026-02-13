@@ -257,3 +257,6 @@ C:\MVC\Store\StoreApp\obj\Debug\net9.0\refint\StoreApp.dll
 C:\MVC\Store\StoreApp\obj\Debug\net9.0\StoreApp.pdb
 C:\MVC\Store\StoreApp\obj\Debug\net9.0\StoreApp.genruntimeconfig.cache
 C:\MVC\Store\StoreApp\obj\Debug\net9.0\ref\StoreApp.dll
+C:\MVC\Store\StoreApp\bin\Debug\net9.0\Presentation.dll
+C:\MVC\Store\StoreApp\bin\Debug\net9.0\Presentation.pdb
+C:\MVC\Store\StoreApp\obj\Debug\net9.0\StoreApp.MvcApplicationPartsAssemblyInfo.cs
