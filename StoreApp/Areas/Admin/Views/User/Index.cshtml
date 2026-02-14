@@ -29,19 +29,18 @@
                 <td user-name="@user.UserName" user-role=""></td>
                 <td>
                     <div class="btn-group">
-                        <a class="btn btn-warning rounded-3" asp-action="Update" asp-route-id="@user.UserName">
+                        <a data-toggle="tooltip" data-placement="top" title="Edit"
+                        class="btn btn-warning rounded-3" asp-action="Update" asp-route-id="@user.UserName">
                             <i class="fa fa-solid fa-edit"></i>
-                            Edit
                         </a>
-                        <a class="btn btn-info rounded-3" asp-action="ResetPassword" asp-route-id="@user.UserName">
+                        <a data-toggle="tooltip" data-placement="top" title="Reset Password"
+                        class="btn btn-info rounded-3" asp-action="ResetPassword" asp-route-id="@user.UserName">
                             <i class="fa-solid fa-arrow-rotate-left"></i>
-                            Reset Password
                         </a>
-                        <form method="post" asp-action="Delete">
+                        <form method="post" asp-action="Delete" data-toggle="tooltip" data-placement="top" title="Delete">
                             <input type="hidden" name="UserName" value="@user.UserName" />
                             <button type="submit" class="btn btn-danger rounded-3">
                                 <i class="fa fa-solid fa-trash"></i>
-                                Delete
                             </button>
                         </form>
                     </div>
@@ -50,3 +49,11 @@
         }
     </tbody>
 </table>
+@section Scripts
+{
+    <script type="text/javascript">
+        $(document).ready(() => {
+        $('[data-toggle="tooltip"]').tooltip()
+        });
+    </script>
+}
