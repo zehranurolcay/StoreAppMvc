@@ -38,8 +38,8 @@ namespace StoreApp.Areas.Admin.Controllers
 
         public IActionResult Create()
         {
+            TempData["info"] = "Please fill the form.";
             ViewBag.Categories = GetCategoriesSelectList();
-            
             return View();
         }
 
@@ -58,9 +58,8 @@ namespace StoreApp.Areas.Admin.Controllers
                     await file.CopyToAsync(stream);                   
                 }
                 productDto.ImageUrl = String.Concat("/images/",file.FileName);
-
-
                 _manager.ProductService.CreateProduct(productDto);
+                TempData["success"] = $"{productDto.ProductName} has been created.";
                 return RedirectToAction("Index");
             }
             return View();
@@ -98,6 +97,7 @@ namespace StoreApp.Areas.Admin.Controllers
         public IActionResult Delete([FromRoute(Name = "id")] int id)
         {
              _manager.ProductService.DeleteOneProduct(id);
+             TempData["danger"] = "The product has been removed.";
             return RedirectToAction("Index");
         }
         private SelectList GetCategoriesSelectList()
