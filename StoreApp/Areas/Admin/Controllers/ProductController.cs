@@ -4,6 +4,7 @@ using Entities.RequestParameters;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
+using Microsoft.EntityFrameworkCore.Metadata.Internal;
 using Services.Contracts;
 using StoreApp.Models;
 
@@ -22,6 +23,7 @@ namespace StoreApp.Areas.Admin.Controllers
 
         public IActionResult Index([FromQuery] ProductRequestParameters p)
         {
+            ViewData["Title"] = "Proucts";
             var products = _manager.ProductService.GetAllProductsWithDetails(p);
             var pagination = new Pagination()
             {
@@ -69,6 +71,7 @@ namespace StoreApp.Areas.Admin.Controllers
         {
             ViewBag.Categories = GetCategoriesSelectList();
             var model = _manager.ProductService.GetOneProductForUpdate(id, false);
+            ViewData["Title"] = model?.ProductName;
             return View(model);
         }
 
@@ -87,7 +90,7 @@ namespace StoreApp.Areas.Admin.Controllers
                 }
                 productDto.ImageUrl = String.Concat("/images/",file.FileName);
                 _manager.ProductService.UpdateOneProduct(productDto);
-                
+                TempData["success"] = $"{productDto.ProductName} has been updated.";
                 return RedirectToAction("Index");
             }
             return View();
