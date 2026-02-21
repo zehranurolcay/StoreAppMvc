@@ -1,30 +1,68 @@
-# StoreAppMvc
+# 🛒 StoreAppMvc
 
-Basit bir mağaza uygulaması örneği olarak geliştirdiğim ASP.NET MVC projesi. Bu proje ile backend mimarisi, veri katmanı ve temel CRUD işlemleri üzerine pratik yapıyorum.
+Modern ASP.NET Core MVC kullanılarak geliştirilmiş, katmanlı mimariye sahip bir E-Ticaret Web Uygulaması.
 
-## Özellikler
+---
 
-- ASP.NET MVC ile katmanlı yapı
-- Basit ürün ve sipariş yönetimi
-- Entity Framework ile veri erişimi
-- Şu anda geliştirme aşamasında
-- AutoMapper ile DTO yönetimi  
-- Razor Pages ve ViewComponent kullanımı  
-- Session yönetimi ve sepet işlemleri 
+## 🚀 Proje Hakkında
 
-## Kullanılan Teknolojiler
+StoreAppMvc, ürün ve sipariş yönetimi işlemlerini gerçekleştiren, sürdürülebilir ve ölçeklenebilir mimari prensiplerine uygun olarak geliştirilmiştir.
 
-- C# / .NET MVC
-- Entity Framework
-- SQL Server (veya başka bir ilişkisel veritabanı)
-- Git ile versiyon kontrolü
-- AutoMapper, Razor Pages, ViewComponent
+Bu projede:
 
-## Gelecek Planlar
+- Katmanlı mimari kullanılmıştır
+- Entity Framework Core ile veri erişimi sağlanmıştır
+- Repository Pattern uygulanmıştır
+- Service Layer ile iş mantığı ayrıştırılmıştır
 
-Projeyi ilerletmek için planladığım eklemeler:
+---
 
-- Kimlik doğrulama (login) sistemi
-- Yetkilendirme ve rol yönetimi
-- Performans iyileştirmeleri
-- Unit / integration test ekleme
+## 🧱 Kullanılan Teknolojiler
+
+| Teknoloji | Açıklama |
+|---------|----------|
+| ASP.NET Core MVC | Web framework |
+| Entity Framework Core | ORM |
+| SQL Server | Veritabanı |
+| C# | Programlama dili |
+| LINQ | Veri sorgulama |
+| Bootstrap | UI tasarımı |
+
+---
+
+## 📂 Proje Mimarisi
+StoreAppMvc
+│
+├── StoreApp.Web → UI Layer
+├── StoreApp.Service → Business Layer
+├── StoreApp.Data → Data Access Layer
+└── StoreApp.Entity → Entity Layer
+
+---
+
+## ✨ Özellikler
+
+✔ Ürün listeleme  
+✔ Ürün detay sayfası  
+✔ Ürün ekleme, silme, güncelleme  
+✔ Sipariş oluşturma  
+✔ SQL Server entegrasyonu  
+✔ Katmanlı mimari  
+
+---
+## ⚙ Kurulum ve Çalıştırma
+
+Projeyi çalıştırmak için öncelikle repository’yi `git clone https://github.com/zehranurolcay/StoreAppMvc.git` komutu ile bilgisayarınıza klonlayın ve Visual Studio ile `StoreAppMvc.sln` dosyasını açın. 
+Ardından `StoreApp.Web` klasörü içindeki `appsettings.json` dosyasında bulunan ConnectionStrings alanını kendi SQL Server bağlantı bilginize göre düzenleyin. 
+Daha sonra Visual Studio içerisinde Tools → NuGet Package Manager → Package Manager Console bölümünü açarak `Update-Database` komutunu çalıştırın ve veritabanını oluşturun. 
+Son olarak projeyi başlatmak için Ctrl + F5 tuşlarına basın veya Start butonuna tıklayın, uygulama tarayıcıda otomatik olarak açılacaktır.
+
+---
+
+## 🎯 Proje Amacı
+
+Bu proje aşağıdaki konularda pratik yapmak için geliştirilmiştir:
+ASP.NET Core MVC
+Entity Framework Core
+N-Tier Architecture
+Repository Pattern
