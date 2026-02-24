@@ -1,6 +1,6 @@
 @model Order
 @{
-    var total = @Model.Lines.Sum(c=>c.Product.Price*c.Quantity);
+    var total = @Model.Lines.Sum(c => c.Product.Price * c.Quantity);
 }
 <div class="row shadow my-3">
     <div class="col-md-3 border-1 border-dark p-3 bg-light shadow">
@@ -13,6 +13,12 @@
         <p>@Model?.Line2</p>
         <p>@Model?.Line3</p>
         <p>@Model?.City</p>
+        <p>
+            Gift Wrap:
+            <span class="badge bg-@(Model?.GiftWrap == true ? "success" : "secondary")">
+                @(Model?.GiftWrap == true ? "Yes" : "No")
+            </span>
+        </p>
         <p class="rounded-2 p-3">
             <span class="bg-warning p-2">Shipped</span>
             <span class="bg-info p-2">@(Model.Shipped ? "Completed" : "In Progress")</span>
@@ -23,12 +29,12 @@
             Cart
         </h6>
         <ul class="list-group">
-            @foreach ( var cartItem in Model?.Lines)
+            @foreach (var cartItem in Model?.Lines)
             {
                 <li class="list-group-item d-flex justify-content-between brand">
                     <b>@cartItem.Product.ProductName</b>
                     <b>@cartItem.Quantity * @cartItem.Product.Price.ToString("C2")
-                        =@((cartItem.Quantity*cartItem.Product.Price).ToString("C2"))
+                        =@((cartItem.Quantity * cartItem.Product.Price).ToString("C2"))
                     </b>
                 </li>
             }
@@ -42,7 +48,7 @@
                 <input type="hidden" name="id" value="@Model.OrderId" />
                 <button type="submit" class="btn btn-primary" disabled="@Model.Shipped">
                     Complete
-                    </button>
+                </button>
             </form>
         </div>
     </div>
