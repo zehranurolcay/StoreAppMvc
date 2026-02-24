@@ -71,22 +71,17 @@ namespace Services
             return productDto;
         }
 
-        public IEnumerable<Product> GetShowcaseProducts(bool trackChanges)
-        {
-            var products = _manager.Product.GetShowcaseProducts(trackChanges);
-            return products;
-        }
-
         public void UpdateOneProduct(ProductDtoForUpdate productDto)
         {
             var entity = _mapper.Map<Product>(productDto);
             _manager.Product.UpdateOneProduct(entity);
             _manager.Save();
         }
-
-        IEnumerable<Product> IProductService.GetAllProductsWithDetails(ProductRequestParameters p)
+        public IEnumerable<Product> GetShowcaseProducts(bool trackChanges)
         {
-            return GetAllProductsWithDetails(p);
+            var products = _manager.Product.GetShowcaseProducts(trackChanges);
+            return products;
         }
+
     }
 }

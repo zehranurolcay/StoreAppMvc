@@ -1,7 +1,5 @@
 using Entities.Models;
 using Entities.RequestParameters;
-using Microsoft.EntityFrameworkCore;
-using Microsoft.EntityFrameworkCore.Metadata.Conventions;
 using Repositories.Contracts;
 using Repositories.Extensions;
 
@@ -13,12 +11,9 @@ namespace Repositories
         {
             
         }
-
         public void CreateOneProduct(Product product)=> Create(product);
-
-        public void DeleteOneProduct(Product product) => Remove(product);
-        
-
+        public void DeleteOneProduct(Product product) => Remove(product);  
+        public void UpdateOneProduct(Product entity)=> Update(entity);
         public IQueryable<Product> GetAllProducts(bool trackChanges) 
         => FindAll(trackChanges);
 
@@ -43,7 +38,6 @@ namespace Repositories
             .Where(p=>p.ShowCase.Equals(true));
         }
 
-        public void UpdateOneProduct(Product entity)=> Update(entity);
 
     
     }
